@@ -1,0 +1,13 @@
+train: avocado-detector-v1.v2i.yolov7pytorch/train/images
+val: avocado-detector-v1.v2i.yolov7pytorch/valid/images
+test: avocado-detector-v1.v2i.yolov7pytorch/test/images
+
+nc: 1
+names: ['avocado']
+
+roboflow:
+  workspace: avocadodetector
+  project: avocado-detector-v1
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/avocadodetector/avocado-detector-v1/dataset/2
