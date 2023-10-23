@@ -36,3 +36,15 @@ Para instalar las dependencias se debe ejecutar el siguiente comando:
 ```bash
 pip install -r requirements.txt
 ```
+
+### Instalación de PyTorch
+Para instalar PyTorch en un equipo con GPU se debe ejecutar el siguiente comando:
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+pip install torchvision==0.15.1+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+Para instalar PyTorch en un equipo sin GPU se debe ejecutar el siguiente comando:
+```bash
+pip3 install torch torchvision
+```
