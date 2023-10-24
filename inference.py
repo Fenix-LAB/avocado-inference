@@ -2,7 +2,6 @@ import torch
 import cv2
 from PIL import Image
 import numpy as np
-import pathlib
 
 # harware acceleration with CUDA
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu" 
@@ -12,7 +11,7 @@ model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'model-avocado-detector/av
                         force_reload=False, trust_repo=True)
 
 # set model to evaluation mode
-model.eval()
+# model.eval()
 model.conf = 0.8 # confidence threshold (0-1)
 
 # initialize webcam
