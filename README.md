@@ -46,5 +46,5 @@ pip install torchvision==0.15.1+cu118 -f https://download.pytorch.org/whl/torch_
 
 Para instalar PyTorch en un equipo sin GPU se debe ejecutar el siguiente comando:
 ```bash
-pip3 install torch torchvision
+pip install torch torchvision
 ```
