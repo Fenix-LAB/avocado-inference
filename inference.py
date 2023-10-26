@@ -7,16 +7,19 @@ import numpy as np
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu" 
 
 # load model from local directory
-model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'model-avocado-detector/avocado_model.pt',
+# model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'model-avocado-detector/avocado_model.pt',
+#                         force_reload=False, trust_repo=True)
+
+model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'model-avocado-ripeness/avocado_ripeness_detector.pt',
                         force_reload=False, trust_repo=True)
 
 # set model to evaluation mode
 # model.eval()
-model.conf = 0.8 # confidence threshold (0-1)
+model.conf = 0.2 # confidence threshold (0-1)
 
 # initialize webcam
 cam = cv2.VideoCapture(0)
-  
+
 while(True): 
     # read frame from webcam
     ret, frame = cam.read()
