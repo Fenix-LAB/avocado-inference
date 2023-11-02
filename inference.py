@@ -18,7 +18,7 @@ model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'model-avocado-ripeness/av
 model.conf = 0.2 # confidence threshold (0-1)
 
 # initialize webcam
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(0) # camara de la laptop, 1 para camara externa
 
 while(True): 
     # read frame from webcam
